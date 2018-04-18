@@ -1,5 +1,7 @@
 var AWS = require("aws-sdk");
 
+AWS.config.update({accessKeyId: 'akid', secretAccessKey: 'secret'});
+
 AWS.config.update({
     region: "us-west-2",
     endpoint: "http://localhost:8000"
@@ -28,7 +30,6 @@ var params = {
 //console.log(params);
 
 dynamodb.createTable(params, function(err, data) {
-    console.log("trying to create Table");
     if (err) {
         console.error("Unable to create table. Error JSON:", JSON.stringify(err, null, 2));
     } else {
