@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    //script(type='text/javascript' src='/javascripts/testScript2.js')
+  body
+    body
+    header
+      h1 Clouders Recipies Book
+      input#Button(type='button' value='Home' onclick="location.href='/';")
+      input#Button(type='button' value='About' onclick="location.href='/about/';")
+      input#Button(type='button' value='Recipes' onclick="location.href='/recipies/';")
+      input#Button(type='button' value='Recipe' onclick="location.href='/recipe/';")
+    .container
+      .main-content
+        block content
+      .sidebar
+        block sidebar
+    footer
+      p Running on node with Express, Pug and Stylus
