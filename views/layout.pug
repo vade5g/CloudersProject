@@ -1,7 +1,17 @@
 doctype html
 html
   head
-    title= title
+    title= Recipies
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript' src='/javascripts/testScript2.js')
   body
-    block content
+    body
+    header
+      h1 Clouders Recipies Book
+    .container
+      .main-content
+        block content
+      .sidebar
+        block sidebar
+    footer
+      p Running on node with Express, Jade and Stylus

@@ -1,12 +1,17 @@
 extends layout
 
 block content
-  h1 Clouders Recipies Book
   p This is going to be our application for AWS
-  p Here are going to be a list of different resepts with pictures.
-  #table-wrapper
-    table#desc
-      tr
-        th Cooking Recipies
-      tr
-        td First Recipe
+  p Here are going to be a list of different recipies with pictures.
+block sidebar
+  .widget
+    h1 Widget
+    p something something
+    p this could be you
+    input#Button(type='button' value='testButton' onclick='testi();')
+    div 
+    input#Button(type='button' value='Load' onclick='makeTableHTML();')
+    
+  script
+    include testscript.js
+  script console.log('taa on parasta')
