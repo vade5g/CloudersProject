@@ -1,7 +1,6 @@
 var AWS = require("aws-sdk");
 var fs = require('fs');
 
-AWS.config.update({accessKeyId: 'akid', secretAccessKey: 'secret'});
 
 AWS.config.update({
     region: "us-west-2",

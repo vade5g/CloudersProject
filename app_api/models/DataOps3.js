@@ -1,6 +1,4 @@
 var AWS = require("aws-sdk");
-AWS.config.update({accessKeyId: 'akid', secretAccessKey: 'secret'});
-
 //This script changes the values of an excisting item in the database. 
 AWS.config.update({
   region: "us-west-2",

@@ -1,5 +1,5 @@
 var AWS = require("aws-sdk");
-AWS.config.update({accessKeyId: 'akid', secretAccessKey: 'secret'});
+//AWS.config.update({accessKeyId: 'akid', secretAccessKey: 'secret'});
 
 //This class implements creating new items to the database. 
 

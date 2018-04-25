@@ -1,7 +1,5 @@
 var AWS = require("aws-sdk");
 
-AWS.config.update({accessKeyId: 'akid', secretAccessKey: 'secret'});
-
 //This script is for deleting items from the database. 
 AWS.config.update({
   region: "us-west-2",
