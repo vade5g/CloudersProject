@@ -1,6 +1,10 @@
 extends layout
 
 block content
- li This is a list of recipies
-   ul recipe one
-   ul recipe two
+ table(border='1')
+  tbody
+    each recipe in recipes
+      tr
+        td 
+          a(href="/recipe") #{recipe.name}
+          p #{recipe.content}

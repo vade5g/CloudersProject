@@ -9,8 +9,6 @@ AWS.config.update({
 
 var dynamodb = new AWS.DynamoDB();
 
-//console.log(dynamodb);
-
 var params = {
     TableName : "Movies",
     KeySchema: [
@@ -26,8 +24,6 @@ var params = {
         WriteCapacityUnits: 10
     }
 };
-
-//console.log(params);
 
 dynamodb.createTable(params, function(err, data) {
     if (err) {
