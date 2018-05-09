@@ -1,5 +1,9 @@
 extends layout
 
 block content
-  p #{recipe.name}
-  p #{recipe.content}
+  p #{recipe.title}
+  p #{recipe.year}
+  p #{recipe.info.plot}
+  p #{recipe.info.release_date}
+  p #{recipe.info.actors}
+  img(src=recipe.info.image_url, alt="something")
