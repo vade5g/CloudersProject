@@ -5,7 +5,8 @@ AWS.config.update({accessKeyId: process.env.AWS_ACCESS_KEY_ID, secretAccessKey: 
 
 AWS.config.update({
     region: "us-west-2",
-    endpoint: "http://localhost:8000"
+    //endpoint: "http://localhost:8000"
+    endpoint: "https://dynamodb.us-west-2.amazonaws.com"
 });
 
 var dynamodb = new AWS.DynamoDB();
@@ -25,11 +26,13 @@ var params = {
         WriteCapacityUnits: 10
     }
 };
+//This needs to be called once when creating a table.
 
-dynamodb.createTable(params, function(err, data) {
+/*dynamodb.createTable(params, function(err, data) {
     if (err) {
         console.error("Unable to create table. Error JSON:", JSON.stringify(err, null, 2));
     } else {
         console.log("Created table. Table description JSON:", JSON.stringify(data, null, 2));
     }
 });
+*/
