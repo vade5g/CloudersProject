@@ -2,8 +2,8 @@ require('dotenv').load();
 var AWS = require("aws-sdk");
 var fs = require('fs');
 
-//AWS.config.update({accessKeyId: process.env.AWS_ACCESS_KEY_ID, secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY});
-AWS.config.update({accessKeyId: 'AKIAITYF2GKYZWVZIS2A',secretAccessKey: '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'})
+AWS.config.update({accessKeyId: process.env.AWS_ACCESS_KEY_ID, secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY});
+//Access key needs to be hardcoded here if the class is run independetly.
 AWS.config.update({
     region: "us-west-2",
     //endpoint: "http://localhost:8000"
