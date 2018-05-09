@@ -13,8 +13,11 @@ AWS.config.update({accessKeyId: 'akid', secretAccessKey: 'secret'});
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
 var routesApi = require('./app_api/routes/index');
-//var db = require('./app_api/models/db');
 
+/**Require database files */
+var db = require('./app_api/models/db');
+//var populateDB = require('./app_api/models/LoadTable');
+//var loadData = require('./app_api/models/LoadTable');
 
 var app = express();
 

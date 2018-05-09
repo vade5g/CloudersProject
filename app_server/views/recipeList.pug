@@ -6,5 +6,6 @@ block content
     each recipe in recipes
       tr
         td 
-          a(href="/recipe") #{recipe.name}
-          p #{recipe.content}
+          a(href=("/recipe/"+recipe.title)) #{recipe.title}
+          p #{recipe.year}
+          p #{recipe.info.plot}

@@ -4,8 +4,9 @@ module.exports.index = function(req,res) {
 };
 
 module.exports.recipeList = function(req,res) {
+
     res.render('recipeList', { title: 'ListOfRecipies',
-        recipes: [{
+        recipes:[{
             name: 'Pancakes',
             content: 'Sugar,milk,flour,eggs'    
         },{
@@ -14,6 +15,17 @@ module.exports.recipeList = function(req,res) {
         }
         ]
     });
+};
+
+//Used For Postman when working locally and testing the REST structure.
+module.exports.getRecipies = function (req, res) {
+    var data = ({
+        firstName: faker.name.firstName(),
+        lastName: faker.name.lastName(),
+        username: faker.internet.userName(),
+        email: faker.internet.email()
+    });
+    res.status(200).send(data);
 };
 module.exports.viewRecipe = function(req,res) {
     res.render('recipe', {title: 'One Recipe',
